@@ -17,7 +17,6 @@ while true do
   
   filetypes.each {|type|
     files += Dir.glob( File.join( "**", "*.#{type}" ) )
-    #files += Dir.glob( File.join( watch_folder, "**", "*.#{type}" ) )
   }
   
   new_hash = files.collect {|f| [ f, File.stat(f).mtime.to_i ] }
